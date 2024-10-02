@@ -1,2 +1,2 @@
-# wp-theme-rodobens
+# Rodobens
 Tema para WordPress
