@@ -1,5 +1,15 @@
 <?php
 
+function rodobems_theme_setup()
+{
+  register_nav_menus(array(
+    'primary' => __('Menu Principal'),
+    'footer' => __('Menu do Rodapé'),
+  ));
+}
+add_action('after_setup_theme', 'rodobems_theme_setup');
+
+
 function rodobems_theme_enqueue_styles()
 {
   $theme_version = wp_get_theme()->get('Version');
