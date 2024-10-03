@@ -1,0 +1,20 @@
+body {
+  font-size: 16px;
+  font-family: "Montserrat", system-ui;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
