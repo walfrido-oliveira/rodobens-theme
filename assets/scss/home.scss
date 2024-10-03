@@ -1,0 +1,26 @@
+.page-template-home-template {
+
+  #hero {
+    min-height: calc(100vh - 96px);
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+
+    .container {
+      height: 600px;
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Dela Gothic One';
+      font-weight: 400;
+      font-size: px-to-rem(64px);
+      line-height: 112px;
+      color: #024420;
+      background-color: #00D176;
+      display: inline;
+      max-width: 560px;
+    }
+  }
+}

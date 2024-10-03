@@ -10,7 +10,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+  <a href="#content" class="skip-link">Pular para o conteúdo principal</a>
 
   <header>
     <div class="container">
