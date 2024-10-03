@@ -1,0 +1,44 @@
+@media (max-width: $mobile) {
+  .menu-mobile-toggle {
+    background-color: transparent;
+    border: 0px;
+    min-width: 41px;
+    min-height: 37px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: #E3E6D1;
+  }
+  
+  .close-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    span:not(.close) {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 17px;
+      color: #E3E6D1;
+    }
+  }
+
+  .container {
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop) {
+  .menu-mobile-toggle {
+    display: none;
+  }
+}

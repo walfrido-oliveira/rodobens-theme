@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     margin-right: 5px;
     vertical-align: middle;
-    font-size: 0px;
+    font-size: 0px !important;
   }
 
   &.facebook {
@@ -30,4 +30,23 @@
       background-image: url("data:image/svg+xml,%3Csvg width='31' height='32' viewBox='0 0 31 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.25' y='0.687622' width='30.625' height='30.625' rx='15.3125' fill='%23E3E6D1'/%3E%3Cpath d='M7.90625 10.4024C7.90625 9.91137 8.07869 9.50627 8.42356 9.18712C8.76844 8.86795 9.21678 8.70837 9.76858 8.70837C10.3105 8.70837 10.749 8.86549 11.084 9.17975C11.4289 9.50383 11.6014 9.9261 11.6014 10.4466C11.6014 10.918 11.4338 11.3108 11.0988 11.625C10.7539 11.9491 10.3007 12.1112 9.73902 12.1112H9.72424C9.18229 12.1112 8.74381 11.9491 8.40878 11.625C8.07376 11.301 7.90625 10.8934 7.90625 10.4024ZM8.0984 23.2917V13.4516H11.3796V23.2917H8.0984ZM13.1976 23.2917H16.4789V17.7972C16.4789 17.4535 16.5183 17.1883 16.5971 17.0017C16.7351 16.6678 16.9445 16.3855 17.2253 16.1547C17.5061 15.9239 17.8584 15.8085 18.2821 15.8085C19.3857 15.8085 19.9375 16.55 19.9375 18.0329V23.2917H23.2188V17.6499C23.2188 16.1964 22.8739 15.0941 22.1841 14.3428C21.4944 13.5916 20.5829 13.2159 19.4497 13.2159C18.1786 13.2159 17.1883 13.761 16.4789 14.851V14.8805H16.4641L16.4789 14.851V13.4516H13.1976C13.2173 13.7659 13.2272 14.743 13.2272 16.383C13.2272 18.023 13.2173 20.3259 13.1976 23.2917Z' fill='%23024420'/%3E%3C/svg%3E%0A");  
     }
   }
+}
+
+.icon {
+  &.close {
+    width: 19.26px;
+    height: 19.26px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7634 1L1.49998 20.2634' stroke='%23E3E6D1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M20.7634 20.2634L1.49998 0.999976' stroke='%23E3E6D1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+
+  &.hamburger {
+    width: 23px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='18' viewBox='0 0 25 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H24' stroke='%23E3E6D1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 9H24' stroke='%23E3E6D1' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 17H24' stroke='%23E3E6D1' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");  }
 }

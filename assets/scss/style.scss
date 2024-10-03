@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import 'variables.scss';
 @import 'reset.scss';
 @import 'main.scss';
+@import 'icons.scss';
+
 @import 'header.scss';
-@import 'icons.scss'
+@import 'footer.scss';
+
+@import 'mobile.scss';
