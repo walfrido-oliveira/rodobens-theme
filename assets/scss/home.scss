@@ -6,6 +6,10 @@
     background-position: top right;
     display: flex;
 
+    @media (min-width: $hd) {
+      background-size: 62%;
+    }
+
     .container {
       height: 600px;
       display: flex;
@@ -16,8 +20,8 @@
       font-family: 'Dela Gothic One';
       font-weight: 400;
       font-size: px-to-rem(64px);
-      line-height: 93px;
       color: #024420;
+      line-height: 0px;
       max-width: 600px;
 
       span {
@@ -26,6 +30,11 @@
         max-height: 74px;
         background-color: #00D176;
         margin: 9.5px 0px;
+        line-height: 93px;
+
+        &:first-child {
+          margin-top: 0px;
+        }
       }
     }
   }
