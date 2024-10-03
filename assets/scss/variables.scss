@@ -1,2 +1,8 @@
 $mobile: 768px;
 $desktop: 769px;
+$base-font-size: 16px;
+$green-dark: #024420;
+
+@function px-to-rem($pixels) {
+  @return calc($pixels / $base-font-size * 1rem);
+}

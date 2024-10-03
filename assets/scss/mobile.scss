@@ -35,10 +35,29 @@
   .container {
     box-sizing: border-box;
   }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .mobile-only,
+  .menu-menu-do-rodape-mobile-container {
+    display: block;
+  }
+
+  .menu-menu-rodape-container {
+    display: none;
+  }
 }
 
 @media (min-width: $desktop) {
-  .menu-mobile-toggle {
+  .menu-mobile-toggle,
+  .mobile-only,
+  .menu-menu-do-rodape-mobile-container {
     display: none;
+  }
+
+  .menu-menu-rodape-container {
+    display: block;
   }
 }

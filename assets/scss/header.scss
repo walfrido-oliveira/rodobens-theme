@@ -1,5 +1,5 @@
 header {
-  background: #024420;
+  background: $green-dark;
   padding: 24px 0px;
 
   .menu-item {
@@ -107,7 +107,7 @@ header {
           top: 0px;
           width: calc(100vw - 40px);
           z-index: 99999999999999999;
-          background-color: #024420;
+          background-color: $green-dark;
           padding: 20px;
 
           overflow: hidden;

@@ -5,7 +5,9 @@ function rodobems_theme_setup()
   register_nav_menus(array(
     'primary' => __('Menu Principal'),
     'footer' => __('Menu do Rodapé'),
+    'footer_mobile' => __('Menu do Rodapé Mobile'),
     'social'  => __('Redes Sociais'),
+    'social-footer'  => __('Redes Sociais Rodapé'),
   ));
 
   add_theme_support('custom-logo', array(
