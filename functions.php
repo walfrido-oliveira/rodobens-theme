@@ -21,9 +21,10 @@ function rodobems_theme_setup()
 }
 add_action('after_setup_theme', 'rodobems_theme_setup');
 
-function rodobems_theme_script() {
+function rodobems_theme_script()
+{
   wp_register_script('main-script', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);
-  
+
   wp_enqueue_script('main-script');
 }
 add_action('wp_enqueue_scripts', 'rodobems_theme_script');
@@ -50,3 +51,20 @@ if (function_exists('acf_add_options_page')) {
     'redirect'      => false
   ));
 }
+
+function permitir_svg_no_upload($mimes)
+{
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'permitir_svg_no_upload');
+
+function permitir_svg_no_editor($data, $file, $filename, $mimes)
+{
+  if (strpos($filename, '.svg') !== false) {
+    $data['ext']  = 'svg';
+    $data['type'] = 'image/svg+xml';
+  }
+  return $data;
+}
+add_filter('wp_check_filetype_and_ext', 'permitir_svg_no_editor', 10, 4);

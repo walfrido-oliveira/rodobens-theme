@@ -49,6 +49,11 @@ hr {
   line-height: 22px;
   text-decoration-line: underline;
   color: #008048;
+
+  @media (max-width: $mobile) {
+    font-size: px-to-rem(16px);
+    line-height: 20px;
+  }
 }
 
 .read-more-2 {
@@ -58,4 +63,9 @@ hr {
   line-height: 22px;
   text-decoration-line: underline;
   color: #E3E6D1;
+
+  @media (max-width: $mobile) {
+    font-size: px-to-rem(16px);
+    line-height: 20px;
+  }
 }
