@@ -2,6 +2,10 @@ header {
   background: $green-dark;
   padding: 24px 0px;
 
+  @media (max-width: $mobile) {
+    padding: 21px 0px 18px 0px;
+  }
+
   .menu-item {
     a {
       font-weight: 400;
