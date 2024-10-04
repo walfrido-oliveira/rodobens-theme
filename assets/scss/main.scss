@@ -3,7 +3,7 @@ body {
   font-family: "Montserrat", system-ui;
 }
 
-.skip-link {
+.skip-link, .screen-reader-only {
   position: absolute;
   left: -10000px;
   top: auto;
