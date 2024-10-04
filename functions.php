@@ -68,3 +68,48 @@ function permitir_svg_no_editor($data, $file, $filename, $mimes)
   return $data;
 }
 add_filter('wp_check_filetype_and_ext', 'permitir_svg_no_editor', 10, 4);
+
+function get_breadcrumbs()
+{
+  global $post;
+
+  echo '<div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><div class="bg"></div><ol>';
+
+  echo '<li><a href="' . home_url() . '">Home</a></li>';
+
+  if (is_category() || is_single()) {
+    if (is_category()) {
+      echo '<li>' . single_cat_title('', false) . '</li>';
+    }
+
+    if (is_single()) {
+      $categories = get_the_category();
+      if (!empty($categories)) {
+        echo '<li><a href="' . get_category_link($categories[0]->term_id) . '">' . $categories[0]->name . '</a></li>';
+      }
+      echo '<li class="current-page" aria-current="page">' . get_the_title() . '</li>';
+    }
+  }
+  elseif (is_page()) {
+    if ($post->post_parent) {
+      $ancestors = get_post_ancestors($post->ID);
+      $ancestors = array_reverse($ancestors);
+
+      foreach ($ancestors as $ancestor) {
+        echo '<li><a href="' . get_permalink($ancestor) . '">' . get_the_title($ancestor) . '</a></li>';
+      }
+    }
+    echo '<li class="current-page" aria-current="page">' . get_the_title() . '</li>';
+  }
+  elseif (is_archive()) {
+    echo '<li>' . post_type_archive_title('', false) . '</li>';
+  }
+  elseif (is_search()) {
+    echo '<li>Resultados da pesquisa por: "' . get_search_query() . '"</li>';
+  }
+  elseif (is_home()) {
+    echo '<li>Blog</li>';
+  }
+
+  echo '</ol></nav></div>';
+}
