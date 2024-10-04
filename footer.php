@@ -9,11 +9,11 @@
             $logo_footer_mobile_id = get_field('logo_footer_mobile', 'option');
 
             if ($logo_footer_id) :
-              echo wp_get_attachment_image($logo_footer_id, 'full', false, array('class' => 'logo-footer'));
+              echo wp_get_attachment_image($logo_footer_id, 'full', false, array('class' => 'logo-footer', 'alt' => 'Ir para a página inicial'));
             endif;
 
             if ($logo_footer_mobile_id) :
-              echo wp_get_attachment_image($logo_footer_mobile_id, 'full', false, array('class' => 'logo-footer-mobile'));
+              echo wp_get_attachment_image($logo_footer_mobile_id, 'full', false, array('class' => 'logo-footer-mobile', 'alt' => 'Ir para a página inicial'));
             endif;
             ?>
           </a>

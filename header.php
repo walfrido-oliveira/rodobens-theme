@@ -21,11 +21,11 @@
           $logo_mobile_id = get_field('logo_mobile', 'option');
 
           if( $logo_id ) :
-            echo wp_get_attachment_image( $logo_id, 'full', false, array('class' => 'logo') );  
+            echo wp_get_attachment_image( $logo_id, 'full', false, array('class' => 'logo', 'alt' => 'Ir para a página inicial') );  
           endif;
 
           if( $logo_mobile_id ) :
-            echo wp_get_attachment_image( $logo_mobile_id, 'full', false, array('class' => 'logo-mobile') );  
+            echo wp_get_attachment_image( $logo_mobile_id, 'full', false, array('class' => 'logo-mobile', 'alt' => 'Ir para a página inicial') );  
           endif;
           ?>
         </a>
