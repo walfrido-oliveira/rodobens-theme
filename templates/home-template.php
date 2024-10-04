@@ -16,23 +16,32 @@ $about_image_mobile = $about_us['bg_mobile'];
 $about_title = $about_us['title'];
 $about_text = $about_us['text'];
 $about_button = $about_us['button'];
-$about_us_title = 'quem-somos';
-$about_us_link = get_permalink(get_page_by_path($about_us_title)->ID);
+$about_us_slug = 'quem-somos';
+$about_us_link = get_permalink(get_page_by_path($about_us_slug)->ID);
 
-$impact_us = get_field('impact');
-$impact_image = $impact_us['bg'];
-$impact_image_mobile = $impact_us['bg_mobile'];
-$impact_title = $impact_us['title'];
-$impact_text = $impact_us['text'];
-$impact_button = $impact_us['button'];
-$impact_us_title = 'impacto';
-$impact_us_link = get_permalink(get_page_by_path($impact_us_title)->ID);
+$impact = get_field('impact');
+$impact_image = $impact['bg'];
+$impact_image_mobile = $impact['bg_mobile'];
+$impact_title = $impact['title'];
+$impact_text = $impact['text'];
+$impact_button = $impact['button'];
+$impact_slug = 'impacto';
+$impact_link = get_permalink(get_page_by_path($impact_slug)->ID);
 
 $icons = get_field('icons');
 $icons_image = $icons['bg'];
 $icons_image_mobile = $icons['bg_mobile'];
 $icons_title = $icons['title'];
 $icons_list = $icons['icons_list'];
+
+$support = get_field('support');
+$support_image = $support['bg'];
+$support_image_mobile = $support['bg_mobile'];
+$support_title = $support['title'];
+$support_text = $support['text'];
+$support_button = $support['button'];
+$support_slug = 'como-apoiar';
+$support_link = get_permalink(get_page_by_path($support_slug)->ID);
 
 ?>
 
@@ -78,6 +87,18 @@ $icons_list = $icons['icons_list'];
       background-image: url(<?php echo $icons_image ?>);
     }
   }
+
+  @media (min-width: 769px) {
+    #support .bg {
+      background-image: url(<?php echo $support_image ?>);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #support .bg {
+      background-image: url(<?php echo $support_image_mobile ?>);
+    }
+  }
 </style>
 
 <main id="content">
@@ -114,7 +135,7 @@ $icons_list = $icons['icons_list'];
           <div class="text">
             <?php echo $impact_text ?>
           </div>
-          <a href="<?php echo $impact_us_link ?>" class="read-more"><?php echo $impact_button ?></a>
+          <a href="<?php echo $impact_link ?>" class="read-more"><?php echo $impact_button ?></a>
         </div>
         <div class="bg"></div>
       </div>
@@ -132,13 +153,26 @@ $icons_list = $icons['icons_list'];
       <div class="icon-list">
         <?php foreach ($icons_list as $icon) : ?>
         <div class="icon-item">
-            <div class="icon-header" style="background-image: url(<?php echo $icon['icon'] ?>);">
-              
-            </div>
+            <div class="icon-header" style="background-image: url(<?php echo $icon['icon'] ?>);"></div>
             <div class="title"><?php echo $icon['title'] ?></div>
             <div class="content"><?php echo $icon['text'] ?></div>
         </div>
         <?php endforeach ?>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content" id="support">
+    <div class="container">
+      <div class="row">
+        <div class="content">
+          <div class="title"><h2><?php echo $support_title ?></h2></div>
+          <div class="text">
+            <?php echo $support_text ?>
+            <a href="<?php echo $support_link ?>" class="read-more-2"><?php echo $support_button ?></a>
+          </div>
+        </div>
+        <div class="bg"></div>
       </div>
     </div>
   </section>
