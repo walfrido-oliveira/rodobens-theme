@@ -69,3 +69,13 @@ hr {
     line-height: 20px;
   }
 }
+
+.desktop-only {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}

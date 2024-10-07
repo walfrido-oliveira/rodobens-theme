@@ -152,11 +152,11 @@ $support_link = get_permalink(get_page_by_path($support_slug)->ID);
       </div>
       <div class="icon-list">
         <?php foreach ($icons_list as $icon) : ?>
-        <div class="icon-item">
-            <div class="icon-header" style="background-image: url(<?php echo $icon['icon'] ?>);"></div>
-            <div class="title"><?php echo $icon['title'] ?></div>
-            <div class="content"><?php echo $icon['text'] ?></div>
-        </div>
+          <div class="icon-item">
+              <div class="icon-header" style="background-image: url(<?php echo $icon['icon'] ?>);"></div>
+              <div class="title"><?php echo $icon['title'] ?></div>
+              <div class="content"><?php echo $icon['text'] ?></div>
+          </div>
         <?php endforeach ?>
       </div>
     </div>
