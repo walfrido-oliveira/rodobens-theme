@@ -151,6 +151,8 @@ get_breadcrumbs();
       </div>
     </div>
   </section>
+  <div class="bg-footer" aria-hidden="true"></div>
+
 </main>
 
 <?php get_footer();
