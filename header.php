@@ -49,16 +49,17 @@
           <span>Menu</span>
         </button>
 
-
       </nav>
 
       <nav id="nav_mobile" style="display: none;">
         <div class="nav-mobile-container">
             <div class="header">
               <div class="nav-mobile-logo">
-                <?php if( $logo_mobile_id ) :
-                  echo wp_get_attachment_image( $logo_mobile_id, 'full', false, array('class' => 'logo-mobile') );  
-                endif; ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php if( $logo_mobile_id ) :
+                    echo wp_get_attachment_image( $logo_mobile_id, 'full', false, array('class' => 'logo-mobile') );  
+                  endif; ?>
+                </a>
               </div>
               <div class="close-container" role="button">
                 <span class="icon close"></span>
