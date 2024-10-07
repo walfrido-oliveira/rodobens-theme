@@ -72,10 +72,10 @@ hr {
 
 .desktop-only {
   @media (max-width: $mobile) {
-    display: none;
+    display: none !important;
   }
 
   @media (min-width: $desktop) {
-    display: block;
+    display: block !important;
   }
 }

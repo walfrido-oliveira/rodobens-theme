@@ -64,7 +64,7 @@
 }
 
 .breadcrumb {
-  margin: 37px 0px 87px 0px;
+  margin: 37px 0px 75px 0px;
 
   @media (max-width: $mobile) {
     margin: 26px 0px 47px 0px;
@@ -132,26 +132,6 @@
           line-height: 130%;
         }
       }
-    }
-  }
-
-  .bg {
-    display: block;
-    position: absolute;
-    left: calc(100% - 402px);
-    right: 0;
-    margin-top: -133px;
-    width: 402px;
-    min-height: 402px;
-    background-repeat: no-repeat;
-    background-position: top right;
-    z-index: -1;
-
-    @media (max-width: $mobile) {
-      width: 147px;
-      min-height: 147px;
-      left: calc(100% - 147px);
-      margin-top: -102px;
     }
   }
 

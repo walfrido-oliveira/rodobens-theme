@@ -43,7 +43,7 @@
 
   .mobile-only,
   .menu-menu-do-rodape-mobile-container {
-    display: block;
+    display: block !important;
   }
 
   .menu-menu-rodape-container {
@@ -55,7 +55,7 @@
   .menu-mobile-toggle,
   .mobile-only,
   .menu-menu-do-rodape-mobile-container {
-    display: none;
+    display: none !important;
   }
 
   .menu-menu-rodape-container {
