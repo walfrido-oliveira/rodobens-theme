@@ -130,6 +130,8 @@
         @media (max-width: $mobile) {
           font-size: px-to-rem(32px);
           line-height: 130%;
+
+          margin-top: 10px;
         }
       }
     }
