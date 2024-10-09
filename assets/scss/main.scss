@@ -3,7 +3,30 @@ body {
   font-family: "Montserrat", system-ui;
 }
 
-.skip-link, .screen-reader-only {
+h2 {
+  font-weight: 700;
+  font-size: 3.25rem;
+  line-height: 63px;
+  color: #024420;
+
+  margin: 53px 0px 38px 0px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #000000;
+}
+
+hr {
+  border: none;
+  border-top: 0.5px solid black;
+  margin: 20px 0;
+}
+
+.skip-link,
+.screen-reader-only {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -18,19 +41,14 @@ body {
   padding: 0 20px;
   width: 100%;
 }
+
 .row {
   display: flex;
-  width: 100%; 
+  width: 100%;
 }
 
 .col {
-  flex: 1; 
-}
-
-hr {
-  border: none; 
-  border-top: 0.5px solid black; 
-  margin: 20px 0; 
+  flex: 1;
 }
 
 .external-link::after {
@@ -86,4 +104,8 @@ hr {
 
 .justify-content-center {
   justify-content: center !important;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
 }

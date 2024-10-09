@@ -43,6 +43,8 @@
         flex-direction: column;
         justify-content: space-between;
 
+        cursor: pointer;
+
         .nome {
           display: flex;
           justify-content: center;
@@ -50,6 +52,7 @@
           min-height: 200px;
 
           background-color: #00D176;
+          transition: 0.3s;
 
           @media (max-width: $mobile) {
             min-height: 123px;
@@ -93,10 +96,30 @@
             text-transform: uppercase;
 
             cursor: pointer;
+            transition: 0.3s;
 
             @media (max-width: $mobile) {
               font-size: px-to-rem(16px);
               line-height: 20px;
+            }
+
+            &:hover {
+              background-color: #E3E6D1;
+              color: #024420;
+            }
+          }
+        }
+
+        &:hover {
+          .nome {
+            background-color: #FF8549;
+            color: #024420;
+          }
+
+          .download {
+            a {
+              background-color: #E3E6D1;
+              color: #024420;
             }
           }
         }

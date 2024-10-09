@@ -307,7 +307,7 @@ textarea {
   }
 }
 
-button {
+.button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -328,10 +328,16 @@ button {
   text-transform: uppercase;
 
   cursor: pointer;
+  transition: 0.3s;
 
   @media (max-width: $mobile) {
     font-size: px-to-rem(16px);
     line-height: 20px;
+  }
+
+  &:hover {
+    background-color: #00D176;
+    color: #024420;
   }
 }
 

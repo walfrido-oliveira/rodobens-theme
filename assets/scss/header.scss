@@ -8,8 +8,8 @@ header {
 
   .menu-item {
     a {
-      font-weight: 400;
-      font-size: 1rem;
+      font-weight: 500;
+      font-size: px-to-rem(16px);
       line-height: 20px;
       color: #E3E6D1;
       text-decoration: none;
@@ -24,13 +24,26 @@ header {
         margin-bottom: 0px;
       }
 
-      &.current_page_item::after,
-      &:hover::after {
+      &.current_page_item {
+        a {
+          color: #00D176;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          height: 2px;
+          width: 100%;
+          background: #00D176;
+        }
+      }
+
+      &:hover:after {
         content: '';
         display: block;
         height: 2px;
         width: 100%;
-        background: #00D176;
+        background: #E3E6D1;
       }
     }
 

@@ -92,10 +92,10 @@ get_breadcrumbs();
               <div class="checkbox-container">
                 <input type="checkbox" id="privacidade" name="privacidade" class="checkbox" aria-required="true" required value="1">
                 <label for="privacidade" class="custom-checkbox"></label>
-                <label for="privacidade">Li e aceito as <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a></label>
+                <label for="privacidade">Li e aceito as <a href="<?php echo esc_url(home_url('/politica-de-privacidade')); ?>" target="_blank">Política de Privacidade</a></label>
               </div>
               <div class="submit-container">
-                <button type="submit">Enviar messagem</button>
+                <button class="button" type="submit">Enviar messagem</button>
               </div>
             </div>
 
