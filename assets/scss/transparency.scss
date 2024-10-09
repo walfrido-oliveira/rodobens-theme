@@ -1,0 +1,106 @@
+.page-template-transparency-template {
+  .breadcrumb {
+    .bg {
+      display: block;
+      position: absolute;
+      left: calc(100% - 402px);
+      right: 0;
+      width: 402px;
+      min-height: 269px;
+      margin-top: -133px;
+      background-repeat: no-repeat;
+      background-position: top right;
+      z-index: -1;
+
+      @media (max-width: $mobile) {
+        width: 81px;
+        min-height: 147px;
+        left: calc(100% - 81px);
+        margin-top: -95px;
+      }
+    }
+  }
+
+  #arquivos {
+    margin-bottom: 90px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 77px;
+    }
+
+    #arquivo_list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 77px 30px;
+
+      @media (max-width: $mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+
+      .arquivo-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .nome {
+          display: flex;
+          justify-content: center;
+
+          min-height: 200px;
+
+          background-color: #00D176;
+
+          @media (max-width: $mobile) {
+            min-height: 123px;
+          }
+
+          a {
+            margin-top: 23px;
+
+            font-weight: 700;
+            font-size: px-to-rem(24px);
+            line-height: 150%;
+            text-align: center;
+            color: #024420;
+            text-decoration: none;
+
+            @media (max-width: $mobile) {
+              font-size: px-to-rem(18px);
+            }
+          }
+        }
+
+        .download {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          margin-top: -23px;
+
+          a {
+            background: #024420;
+            border-radius: 32px;
+
+            padding: 12px 24px;
+
+            font-weight: 700;
+            font-size: px-to-rem(18px);
+            line-height: 22px;
+            text-align: center;
+            color: #E3E6D1;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            @media (max-width: $mobile) {
+              font-size: px-to-rem(16px);
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -46,6 +46,10 @@
     display: block !important;
   }
 
+  .mobile-only-flex {
+    display: flex !important;
+  }
+
   .menu-menu-rodape-container {
     display: none;
   }
@@ -54,7 +58,8 @@
 @media (min-width: $desktop) {
   .menu-mobile-toggle,
   .mobile-only,
-  .menu-menu-do-rodape-mobile-container {
+  .menu-menu-do-rodape-mobile-container,
+  .mobile-only-flex {
     display: none !important;
   }
 
