@@ -199,7 +199,11 @@ textarea {
   }
 
   .checkbox {
-    display: none;
+    height: 1px;
+    margin-left: 10.5px;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
 
     &:checked+.custom-checkbox::after {
       display: block;
@@ -356,7 +360,7 @@ button {
   @media (max-width: $mobile) {
     font-size: px-to-rem(16px);
     line-height: 20px;
-    
+
     max-width: max-content;
   }
 }

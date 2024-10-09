@@ -139,6 +139,22 @@
         margin-top: 25px;
       }
     }
+
+    .response {
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      .error {
+        color:red;
+      }
+
+      .success {
+        color:#024420;
+      }
+    }
   }
 
   #junte_se_a_nos {

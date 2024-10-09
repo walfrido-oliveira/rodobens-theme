@@ -26,6 +26,10 @@ function rodobems_theme_script()
   wp_register_script('main-script', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);
 
   wp_enqueue_script('main-script');
+
+  wp_localize_script('main-script', 'configs', array(
+    'ajaxurl' => admin_url('admin-ajax.php'),
+  ));
 }
 add_action('wp_enqueue_scripts', 'rodobems_theme_script');
 
@@ -89,8 +93,7 @@ function get_breadcrumbs()
       }
       echo '<li class="current-page" aria-current="page">' . get_the_title() . '</li>';
     }
-  }
-  elseif (is_page()) {
+  } elseif (is_page()) {
     if ($post->post_parent) {
       $ancestors = get_post_ancestors($post->ID);
       $ancestors = array_reverse($ancestors);
@@ -100,16 +103,67 @@ function get_breadcrumbs()
       }
     }
     echo '<li class="current-page" aria-current="page">' . get_the_title() . '</li>';
-  }
-  elseif (is_archive()) {
+  } elseif (is_archive()) {
     echo '<li>' . post_type_archive_title('', false) . '</li>';
-  }
-  elseif (is_search()) {
+  } elseif (is_search()) {
     echo '<li>Resultados da pesquisa por: "' . get_search_query() . '"</li>';
-  }
-  elseif (is_home()) {
+  } elseif (is_home()) {
     echo '<li>Blog</li>';
   }
 
   echo '</ol></nav></div>';
 }
+
+function enviar_formulario_contato()
+{
+  parse_str($_POST['dados'], $dados);
+
+  $nome = sanitize_text_field($dados['nome']);
+  $telefone = sanitize_text_field($dados['telefone']);
+  $email = sanitize_email($dados['email']);
+  $assunto = sanitize_text_field($dados['assunto']);
+  $mensagem = sanitize_textarea_field($dados['mensagem']);
+  $privacidade = isset($dados['privacidade']) ? $dados['privacidade'] : '';
+
+  $errors = [];
+
+  if (empty($nome)) {
+    $errors[] = "O campo nome é obrigatório.";
+  }
+  if (empty($telefone)) {
+    $errors[] = "O campo telefone é obrigatório.";
+  }
+  if (!is_email($email)) {
+    $errors[] = "O campo e-mail deve conter um e-mail válido.";
+  }
+  if (empty($assunto)) {
+    $errors[] = "O campo assunto é obrigatório.";
+  }
+  if (empty($mensagem)) {
+    $errors[] = "O campo mensagem é obrigatório.";
+  }
+  if (empty($privacidade)) {
+    $errors[] = "Você deve aceitar os termos de privacidade.";
+  }
+
+  if (!empty($errors)) {
+    foreach ($errors as $error) {
+      echo "<p class='error'>$error</p>";
+    }
+    wp_die();
+  }
+
+  $to = get_option('admin_email');
+  $headers = "From: $nome <$email>\r\n";
+  $mail_content = "Nome: $nome\nTelefone: $telefone\nE-mail: $email\nAssunto: $assunto\nMensagem: $mensagem";
+
+  if (wp_mail($to, $assunto, $mail_content, $headers)) {
+    echo "<p class='success'>Seu e-mail foi enviado com sucesso!</p>";
+  } else {
+    echo "<p class='error'>Ocorreu um erro ao enviar o e-mail. Tente novamente.</p>";
+  }
+
+  wp_die();
+}
+add_action('wp_ajax_enviar_formulario_contato', 'enviar_formulario_contato');
+add_action('wp_ajax_nopriv_enviar_formulario_contato', 'enviar_formulario_contato');

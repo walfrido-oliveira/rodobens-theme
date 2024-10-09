@@ -2,6 +2,7 @@
 /*
 Template Name: Contato
 */
+
 get_header();
 
 $image = get_field('bg');
@@ -60,7 +61,7 @@ get_breadcrumbs();
           </div>
         </div>
         <div class="col form-contato">
-          <form action="/enviar-contato" method="POST">
+          <form action="" method="POST">
             <div class="form-group">
               <label for="nome" class="screen-reader-only">Nome</label>
               <input type="text" id="nome" name="nome" aria-required="true" required placeholder="Nome">
@@ -69,7 +70,7 @@ get_breadcrumbs();
             <div class="form-group">
               <div class="col">
                 <label for="telefone" class="screen-reader-only">Telefone</label>
-                <input type="tel" id="telefone" name="email" aria-required="true" required placeholder="Telefone">
+                <input type="tel" id="telefone" name="telefone" aria-required="true" required placeholder="Telefone">
               </div>
               <div class="col">
                 <label for="email" class="screen-reader-only">E-mail</label>
@@ -89,13 +90,22 @@ get_breadcrumbs();
 
             <div class="form-group form-group-footer">
               <div class="checkbox-container">
-                <input type="checkbox" id="privacidade" name="privacidade" class="checkbox" aria-required="true" required>
+                <input type="checkbox" id="privacidade" name="privacidade" class="checkbox" aria-required="true" required value="1">
                 <label for="privacidade" class="custom-checkbox"></label>
                 <label for="privacidade">Li e aceito as <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a></label>
               </div>
               <div class="submit-container">
                 <button type="submit">Enviar messagem</button>
               </div>
+            </div>
+
+            <div class="response <?php if(!empty($success_message) || !empty($error_message)) : echo 'show'; endif; ?>">
+              <?php if (!empty($success_message)) : ?>
+                <p class="success"><?php echo $success_message ?></p>
+              <?php endif; ?>
+              <?php if (!empty($error_message)) : ?>
+                <p class="error"><?php echo $error_message ?></p>
+              <?php endif; ?>
             </div>
           </form>
         </div>

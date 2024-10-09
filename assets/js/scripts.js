@@ -1,10 +1,10 @@
-jQuery(document).ready(function($) {
-  $('body').on('click', '.menu-mobile-toggle', function(e) {
+jQuery(document).ready(function ($) {
+  $('body').on('click', '.menu-mobile-toggle', function (e) {
     e.preventDefault();
     toggleMobileMenu();
   });
 
-  $('body').on('click', '.close-container', function(e) {
+  $('body').on('click', '.close-container', function (e) {
     e.preventDefault();
     toggleMobileMenu();
   });
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
 
     $('.projeto-item button').attr('aria-expanded', 'false');
     $('.projeto-item .projeto-content').css('max-height', 0);
-  
+
     if (!expanded) {
       $button.attr('aria-expanded', 'true');
       $content.css('max-height', ($content[0].scrollHeight + 48) + 'px');
@@ -35,5 +35,29 @@ jQuery(document).ready(function($) {
 
 
   });
-  
+
+  $('.form-contato form').on('submit', function (e) {
+    e.preventDefault(); 
+
+    var formData = $(this).serialize(); 
+    var $response = $('.form-contato form .response')
+
+    $.ajax({
+      url: configs.ajaxurl,
+      type: 'POST',
+      data: {
+        action: 'enviar_formulario_contato',
+        dados: formData
+      },
+      success: function (response) {
+        $($response).html(response);
+        $($response).addClass('show')
+      },
+      error: function () {
+        $($response).html('<p class="error">Ocorreu um erro ao enviar o e-mail. Tente novamente.</p>');
+        $($response).addClass('show')
+      }
+    });
+  });
+
 });
