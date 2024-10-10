@@ -13,20 +13,6 @@ get_breadcrumbs();
 
 ?>
 
-<style>
-  @media (min-width: 769px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image ?>);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image_mobile ?>);
-    }
-  }
-</style>
-
 <main id="content">
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="arquivos">

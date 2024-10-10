@@ -5,8 +5,6 @@ Template Name: Quem Somos
 
 get_header();
 
-$image = get_field('bg');
-$image_mobile = get_field('bg_mobile');
 $visao__missao__valores = get_field('visao__missao__valores');
 
 $foto_equipe = get_field('foto_equipe');
@@ -22,20 +20,6 @@ $organograma_mobile = get_field('organograma_mobile');
 get_breadcrumbs();
 
 ?>
-
-<style>
-  @media (min-width: 769px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image ?>);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image_mobile ?>);
-    }
-  }
-</style>
 
 <main id="content">
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>

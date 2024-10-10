@@ -5,9 +5,6 @@ Template Name: Contato
 
 get_header();
 
-$image = get_field('bg');
-$image_mobile = get_field('bg_mobile');
-
 $junte_se_a_nos_imagem = get_field('junte_se_a_nos_imagem');
 $junte_se_a_nos_imagem_mobile = get_field('junte_se_a_nos_imagem_mobile');
 
@@ -16,20 +13,6 @@ $qr_code = get_field('qr_code');
 get_breadcrumbs();
 
 ?>
-
-<style>
-  @media (min-width: 769px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image ?>);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .breadcrumb .bg {
-      background-image: url(<?php echo $image_mobile ?>);
-    }
-  }
-</style>
 
 <main id="content">
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>

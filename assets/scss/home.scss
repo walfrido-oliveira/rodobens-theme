@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .page-template-home-template {
 
   #hero {
@@ -233,8 +235,10 @@
       left: calc(100% - 299px);
       right: 0;
       margin-top: -254px;
+      
       width: 299px;
       min-height: 472px;
+      
       background-repeat: no-repeat;
       background-position: top right;
 

@@ -4,6 +4,7 @@ $hd: 1600px;
 $base-font-size: 16px;
 $green-dark: #024420;
 $max-width: 1120px;
+$base-width: 1440px;
 
 @function px-to-rem($pixels) {
   @return calc($pixels / $base-font-size * 1rem);
