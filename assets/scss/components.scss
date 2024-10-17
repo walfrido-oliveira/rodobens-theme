@@ -35,7 +35,7 @@
       font-weight: 700;
       font-size: px-to-rem(32px);
       line-height: 39px;
-      color: #024420;
+      color: $green-dark;
       margin-bottom: 10px;
       margin-top: 18px;
 
@@ -49,7 +49,7 @@
       font-weight: 400;
       font-size: px-to-rem(18px);
       line-height: 150%;
-      color: #000000;
+      color: $black;
       padding: 0px 90px;
       margin-bottom: 29px;
 
@@ -84,7 +84,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 27px;
-        color: #024420;
+        color: $green-dark;
         text-decoration: none;
 
         @media (max-width: $mobile) {
@@ -105,7 +105,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 27px;
-        color: #024420;
+        color: $green-dark;
 
         @media (max-width: $mobile) {
           font-size: px-to-rem(14px);
@@ -122,7 +122,7 @@
         font-weight: 400;
         font-size: px-to-rem(64px);
         line-height: 93px;
-        color: #024420;
+        color: $green-dark;
 
         text-decoration: none;
         display: block;
@@ -156,7 +156,7 @@ textarea {
   font-weight: 400;
   font-size: px-to-rem(18px);
   line-height: 150%;
-  color: #000000;
+  color: $black;
 
   &::placeholder,
   &::-webkit-input-placeholder,
@@ -166,7 +166,7 @@ textarea {
     font-weight: 400;
     font-size: px-to-rem(18px);
     line-height: 150%;
-    color: #000000;
+    color: $black;
   }
 }
 
@@ -175,19 +175,19 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 ::-moz-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 :-ms-input-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 :-moz-placeholder {
-  color: #000000;
+  color: $black;
 }
 
 .checkbox-container {
@@ -210,8 +210,8 @@ textarea {
     }
 
     &:checked+.custom-checkbox {
-      background-color: #024420;
-      border-color: #024420;
+      background-color: $green-dark;
+      border-color: $green-dark;
     }
   }
 
@@ -233,7 +233,7 @@ textarea {
       left: 6px;
       width: 8px;
       height: 12px;
-      border: solid #E3E6D1;
+      border: solid $beige;
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
     }
@@ -244,7 +244,7 @@ textarea {
     font-weight: 400;
     font-size: px-to-rem(18px);
     line-height: 150%;
-    color: #000000;
+    color: $black;
 
     @media (max-width: $mobile) {
       font-size: px-to-rem(14px);
@@ -255,7 +255,7 @@ textarea {
       font-weight: 400;
       font-size: px-to-rem(18px);
       line-height: 150%;
-      color: #000000;
+      color: $black;
       text-decoration: none;
 
       &:hover {
@@ -315,7 +315,7 @@ textarea {
   padding: 12px 24px;
   gap: 8px;
 
-  background: #024420;
+  background: $green-dark;
   border-radius: 32px;
   border: 0px;
 
@@ -323,7 +323,7 @@ textarea {
   font-size: px-to-rem(18px);
   line-height: 22px;
   text-align: center;
-  color: #E3E6D1;
+  color: $beige;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -336,8 +336,8 @@ textarea {
   }
 
   &:hover {
-    background-color: #00D176;
-    color: #024420;
+    background-color: $gree-light;
+    color: $green-dark;
   }
 }
 
@@ -349,7 +349,7 @@ textarea {
   padding: 12px 24px;
   gap: 8px;
 
-  background: #E3E6D1;
+  background: $beige;
   border-radius: 32px;
   border: 0px;
 
@@ -357,7 +357,7 @@ textarea {
   font-size: px-to-rem(18px);
   line-height: 22px;
   text-align: center;
-  color: #024420;
+  color: $green-dark;
   text-decoration: none;
   text-transform: uppercase;
 

@@ -11,7 +11,7 @@ header {
       font-weight: 500;
       font-size: px-to-rem(16px);
       line-height: 20px;
-      color: #E3E6D1;
+      color: $beige;
       text-decoration: none;
     }
 
@@ -26,7 +26,7 @@ header {
 
       &.current_page_item {
         a {
-          color: #00D176;
+          color: $gree-light;
         }
 
         &::after {
@@ -34,7 +34,7 @@ header {
           display: block;
           height: 2px;
           width: 100%;
-          background: #00D176;
+          background: $gree-light;
         }
       }
 
@@ -43,7 +43,7 @@ header {
         display: block;
         height: 2px;
         width: 100%;
-        background: #E3E6D1;
+        background: $beige;
       }
     }
 

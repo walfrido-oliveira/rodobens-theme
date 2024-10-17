@@ -34,9 +34,9 @@
       font-weight: 700;
       font-size: px-to-rem(52px);
       line-height: 63px;
-      color: #024420;
+      color: $green-dark;
 
-      background: #FF8549;
+      background: $orange;
 
       padding: 1px 13px 0px 13px;
       width: max-content;
@@ -79,7 +79,7 @@
         font-weight: 400;
         font-size: px-to-rem(18px);
         line-height: 150%;
-        color: #000000;
+        color: $black;
 
         @media (max-width: $mobile) {
           font-weight: 400;
@@ -116,7 +116,7 @@
             font-weight: 700;
             font-size: px-to-rem(24px);
             line-height: 150%;
-            color: #008048;
+            color: $green-contrast;
 
             @media (max-width: $mobile) {
               font-size: px-to-rem(18px);
@@ -155,7 +155,7 @@
               font-weight: 400;
               font-size: px-to-rem(12px);
               line-height: 15px;
-              color: #024420;
+              color: $green-dark;
             }
 
           }
@@ -180,7 +180,7 @@
               font-weight: 400;
               font-size: px-to-rem(18px);
               line-height: 150%;
-              color: #000000;
+              color: $black;
 
               margin-bottom: 27px;
 
@@ -214,9 +214,9 @@
       font-weight: 700;
       font-size: px-to-rem(52px);
       line-height: 63px;
-      color: #024420;
+      color: $green-dark;
 
-      background: #00D176;
+      background: $gree-light;
 
       padding: 1px 13px 0px 13px;
       margin-bottom: 39px;
@@ -245,7 +245,7 @@
         font-weight: 400;
         font-size: px-to-rem(18px);
         line-height: 150%;
-        color: #000000;
+        color: $black;
 
         @media (max-width: $mobile) {
           font-weight: 400;
@@ -256,7 +256,7 @@
   }
 
   #galeria {
-    background-color: #E3E6D1;
+    background-color: $beige;
 
     margin-top: 58px;
     padding: 69px 0px 69px 0px;
@@ -270,9 +270,9 @@
       font-weight: 700;
       font-size: px-to-rem(52px);
       line-height: 63px;
-      color: #024420;
+      color: $green-dark;
 
-      background: #FF8549;
+      background: $orange;
 
       padding: 1px 13px 0px 13px;
       margin-bottom: 39px;
@@ -301,7 +301,7 @@
         font-weight: 400;
         font-size: px-to-rem(18px);
         line-height: 150%;
-        color: #000000;
+        color: $black;
 
         @media (max-width: $mobile) {
           font-weight: 400;
@@ -323,7 +323,7 @@
         figure {
 
           figcaption {
-            background-color: #024420;
+            background-color: $green-dark;
   
             font-weight: 400;
             font-size: px-to-rem(18px);
@@ -358,9 +358,9 @@
       font-weight: 700;
       font-size: px-to-rem(52px);
       line-height: 63px;
-      color: #024420;
+      color: $green-dark;
 
-      background: #00D176;
+      background: $gree-light;
 
       padding: 1px 13px 0px 13px;
       margin-bottom: 56px;

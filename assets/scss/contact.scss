@@ -35,7 +35,7 @@
       font-weight: 400;
       font-size: px-to-rem(18px);
       line-height: 150%;
-      color: #000000;
+      color: $black;
 
       @media (max-width: $mobile) {
         font-size: px-to-rem(16px);
@@ -160,7 +160,7 @@
       }
 
       .success {
-        color:#024420;
+        color:$green-dark;
       }
     }
   }
@@ -169,7 +169,7 @@
     margin-top: 50px;
     padding: 78px 0px 60px 0px;
 
-    background-color: #024420;
+    background-color: $green-dark;
 
     @media (max-width: $mobile) {
       margin-top: 47px;
@@ -181,7 +181,7 @@
         font-weight: 700;
         font-size: px-to-rem(52px);
         line-height: 63px;
-        color: #FF8549;
+        color: $orange;
 
         margin-bottom: 26px;
 
@@ -205,7 +205,7 @@
         font-weight: 400;
         font-size: px-to-rem(18px);
         line-height: 150%;
-        color: #E3E6D1;
+        color: $beige;
 
         margin-bottom: 27px;
 

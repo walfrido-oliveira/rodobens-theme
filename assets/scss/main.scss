@@ -7,7 +7,7 @@ h2 {
   font-weight: 700;
   font-size: 3.25rem;
   line-height: 63px;
-  color: #024420;
+  color: $green-dark;
 
 }
 
@@ -15,12 +15,12 @@ p {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 150%;
-  color: #000000;
+  color: $black;
 }
 
 hr {
   border: none;
-  border-top: 0.5px solid black;
+  border-top: 0.5px solid $black;
   margin: 20px 0;
 }
 
@@ -73,7 +73,7 @@ hr {
   font-size: px-to-rem(18px);
   line-height: 22px;
   text-decoration-line: underline;
-  color: #008048;
+  color: $green-contrast;
 
   @media (max-width: $mobile) {
     font-size: px-to-rem(16px);
@@ -87,7 +87,7 @@ hr {
   font-size: px-to-rem(18px);
   line-height: 22px;
   text-decoration-line: underline;
-  color: #E3E6D1;
+  color: $beige;
 
   @media (max-width: $mobile) {
     font-size: px-to-rem(16px);

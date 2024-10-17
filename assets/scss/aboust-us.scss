@@ -67,7 +67,7 @@
           font-weight: 700;
           font-size: px-to-rem(32px);
           line-height: 39px;
-          color: #024420;
+          color: $green-dark;
         }
 
         .content,
@@ -75,7 +75,7 @@
           font-weight: 400;
           font-size: 18px;
           line-height: 150%;
-          color: #000000;
+          color: $black;
 
           @media (max-width: $mobile) {
             font-size: px-to-rem(16px);
@@ -154,7 +154,7 @@
       font-weight: 700;
       font-size: px-to-rem(52px);
       line-height: 63px;
-      color: #024420;
+      color: $green-dark;
 
       @media (max-width: $mobile) {
         font-size: px-to-rem(28px);
@@ -166,9 +166,9 @@
       font-weight: 600;
       font-size: px-to-rem(40px);
       line-height: 49px;
-      color: #008048;
+      color: $green-contrast;
 
-      border-bottom: 2px solid #008048;
+      border-bottom: 2px solid $green-contrast;
 
       margin: 53px 0px 38px 0px;
 
@@ -203,7 +203,7 @@
           font-weight: 400;
           font-size: px-to-rem(18px);
           line-height: 150%;
-          color: #000000;
+          color: $black;
 
           margin: 24px 0 4px 0;
 
@@ -217,7 +217,7 @@
           font-weight: 700;
           font-size: px-to-rem(24px);
           line-height: 150%;
-          color: #000000;
+          color: $black;
 
           @media (max-width: $mobile) {
             font-size: px-to-rem(18px);
@@ -246,7 +246,7 @@
           font-weight: 400;
           font-size: px-to-rem(18px);
           line-height: 150%;
-          color: #000000;
+          color: $black;
 
           @media (max-width: $mobile) {
             font-size: px-to-rem(16px);
@@ -259,7 +259,7 @@
           font-weight: 700;
           font-size: px-to-rem(24px);
           line-height: 150%;
-          color: #000000;
+          color: $black;
 
           margin-bottom: 4px;
 
