@@ -116,7 +116,7 @@ footer {
     }
   }
 
-  .copyright, .dev, .dev a {
+  .copyright, .copyright *, .dev, .dev a, .dev p {
     font-weight: 400;
     font-size: px-to-rem(14px);
     line-height: 17px;
