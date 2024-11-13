@@ -24,7 +24,8 @@ footer {
     }
   }
 
-  .address, .address * {
+  .address,
+  .address * {
     font-weight: 400;
     font-size: px-to-rem(14px);
     line-height: 150%;
@@ -55,48 +56,47 @@ footer {
       margin-top: 32px;
     }
   }
-  
-  .menu-menu-rodape-container, .menu-menu-do-rodape-mobile-container {
-    #menu-menu-rodape, #menu-menu-do-rodape-mobile {
-      list-style-type: none;
-      padding: 0;
-      display: grid; 
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4px 32px;
 
-      @media (max-width: $mobile) {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .footer-menu,
+  .footer-menu-mobile {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 32px;
 
-      .menu-item {
-        flex: 1;
-        box-sizing: border-box;
-        white-space: nowrap;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item {
+      flex: 1;
+      box-sizing: border-box;
+      white-space: nowrap;
 
 
-        a {
-          font-weight: 400;
-          font-size: px-to-rem(18px);
-          line-height: 150%;
-          color: $green-dark;
-          text-decoration: none;
+      a {
+        font-weight: 400;
+        font-size: px-to-rem(18px);
+        line-height: 150%;
+        color: $green-dark;
+        text-decoration: none;
 
-          @media (max-width: $mobile) {
-            font-weight: 500;
-            font-size: px-to-rem(16px);
-          }
+        @media (max-width: $mobile) {
+          font-weight: 500;
+          font-size: px-to-rem(16px);
+        }
 
-          &:hover {
-            text-decoration: underline;
-          }
+        &:hover {
+          text-decoration: underline;
         }
       }
-
     }
+
   }
 
   .menu-redes-sociais-rodape-container {
-    #menu-redes-sociais-rodape {
+    .footer-social-menu {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -105,18 +105,22 @@ footer {
   }
 
   hr {
-    margin: 31px 0 18px 0px; 
+    margin: 31px 0 18px 0px;
 
     @media (max-width: $mobile) {
       margin-bottom: 7px;
     }
 
     &.mobile-only {
-      margin: 7px 0 10px 0px; 
+      margin: 7px 0 10px 0px;
     }
   }
 
-  .copyright, .copyright *, .dev, .dev a, .dev p {
+  .copyright,
+  .copyright *,
+  .dev,
+  .dev a,
+  .dev p {
     font-weight: 400;
     font-size: px-to-rem(14px);
     line-height: 17px;
@@ -128,6 +132,12 @@ footer {
     }
   }
 
+  .dev a {
+    &:hover {
+      color: $green-dark;
+    }
+  }
+
   .copyright {
     @media (max-width: $mobile) {
       padding: 0 13px;
@@ -136,6 +146,7 @@ footer {
 
   .dev {
     text-align: right;
+
     @media (max-width: $mobile) {
       text-align: center;
     }

@@ -24,10 +24,12 @@
       </div>
       <div class="col" id="footer_nav">
         <nav>
-          <?php wp_nav_menu(array(
+          <?php 
+          wp_nav_menu(array(
             'theme_location' => 'footer',
             'menu_class' => 'footer-menu',
           )); 
+          
           wp_nav_menu(array(
             'theme_location' => 'footer_mobile',
             'menu_class' => 'footer-menu-mobile',
