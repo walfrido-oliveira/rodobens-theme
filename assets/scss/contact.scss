@@ -37,6 +37,15 @@
       line-height: 150%;
       color: $black;
 
+      p {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+      }
+
       @media (max-width: $mobile) {
         font-size: px-to-rem(16px);
       }
