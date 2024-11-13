@@ -16,12 +16,12 @@ $equipe = $governanca['equipe'];
 
 $organograma = get_field('organograma');
 $organograma_mobile = get_field('organograma_mobile');
-
-get_breadcrumbs();
-
 ?>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="nossa_missao">
     <div class="container">
@@ -115,10 +115,10 @@ get_breadcrumbs();
     <div class="container">
       <div class="row">
         <div class="col imagem-organograma">
-        <?php if ($organograma) :
-          echo wp_get_attachment_image($organograma, 'full', false, array('class' => 'desktop-only', 'alt' => 'Organograma da empresa'));
-          echo wp_get_attachment_image($organograma_mobile, 'full', false, array('class' => 'mobile-only', 'alt' => 'Organograma da empresa'));
-        endif; ?>
+          <?php if ($organograma) :
+            echo wp_get_attachment_image($organograma, 'full', false, array('class' => 'desktop-only', 'alt' => 'Organograma da empresa'));
+            echo wp_get_attachment_image($organograma_mobile, 'full', false, array('class' => 'mobile-only', 'alt' => 'Organograma da empresa'));
+          endif; ?>
         </div>
         <div class="bg"></div>
       </div>

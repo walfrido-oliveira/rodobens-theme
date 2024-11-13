@@ -8,12 +8,12 @@ $image = get_field('bg');
 $image_mobile = get_field('bg_mobile');
 
 $arquivos = get_field('arquivos');
-
-get_breadcrumbs();
-
 ?>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="arquivos">
     <div class="container">

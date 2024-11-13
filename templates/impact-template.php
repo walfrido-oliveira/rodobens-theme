@@ -16,9 +16,6 @@ $nossa_presenca_mobile = get_field('nossa_presenca_mobile');
 $galeria_de_imagens = get_field('galeria_de_imagens');
 
 $selos_e_certificacoes = get_field('selos_e_certificacoes');
-
-get_breadcrumbs();
-
 ?>
 
 <style>
@@ -36,6 +33,9 @@ get_breadcrumbs();
 </style>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="projetos_into">
     <div class="container">
@@ -111,10 +111,10 @@ get_breadcrumbs();
           <div class="galeria-item">
             <figure>
               <?php
-                $imagem = $galeria['imagem'];
-                if ($imagem) :
-                  echo wp_get_attachment_image($imagem, 'full', false);
-                endif;
+              $imagem = $galeria['imagem'];
+              if ($imagem) :
+                echo wp_get_attachment_image($imagem, 'full', false);
+              endif;
               ?>
               <figcaption><?php echo $galeria['legenda'] ?></figcaption>
             </figure>
@@ -132,10 +132,10 @@ get_breadcrumbs();
         <?php foreach ($selos_e_certificacoes as $key => $selo) : ?>
           <div class="selo-item">
             <?php
-              $imagem = $selo['imagem'];
-              if ($imagem) :
-                echo wp_get_attachment_image($imagem, 'full', false);
-              endif;
+            $imagem = $selo['imagem'];
+            if ($imagem) :
+              echo wp_get_attachment_image($imagem, 'full', false);
+            endif;
             ?>
           </div>
         <?php endforeach ?>

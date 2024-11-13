@@ -10,11 +10,12 @@ $junte_se_a_nos_imagem_mobile = get_field('junte_se_a_nos_imagem_mobile');
 
 $qr_code = get_field('qr_code');
 
-get_breadcrumbs();
-
 ?>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="contato">
     <div class="container">

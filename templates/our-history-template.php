@@ -12,9 +12,6 @@ $imagem_direita = get_field('imagem_direita');
 $imagem_direita_mobile = get_field('imagem_direita_mobile');
 $imagem_esquerda = get_field('imagem_esquerda');
 $imagem_esquerda_mobile = get_field('imagem_esquerda_mobile');
-
-get_breadcrumbs();
-
 ?>
 
 <style>
@@ -32,6 +29,9 @@ get_breadcrumbs();
 </style>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="historia_1">
     <div class="container">

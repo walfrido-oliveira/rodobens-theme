@@ -20,9 +20,6 @@ $produto_2_mobile = $produtos['produto_2_mobile'];
 
 $link_produto_1 = $produtos['link_produto_1'];
 $link_produto_2 = $produtos['link_produto_2'];
-
-get_breadcrumbs();
-
 ?>
 
 <style>
@@ -40,6 +37,9 @@ get_breadcrumbs();
 </style>
 
 <main id="content">
+
+  <?php get_breadcrumbs(); ?>
+
   <h1 class="screen-reader-only"><?php the_title(); ?></h1>
   <section class="section-content" id="doacoes">
     <div class="container">
@@ -79,7 +79,7 @@ get_breadcrumbs();
           </div>
         </div>
         <div class="produtos">
-            <div class="produto-1">
+          <div class="produto-1">
             <a href="<?php echo $link_produto_1 ?>">
               <?php if ($produto_1) :
                 echo wp_get_attachment_image($produto_1, 'full', false, array('class' => 'desktop-only'));
@@ -87,16 +87,16 @@ get_breadcrumbs();
               endif;
               ?>
             </a>
-            </div>
-            <div class="produto-2">
-              <a href="<?php echo $link_produto_2 ?>">
-                <?php if ($produto_2) :
-                    echo wp_get_attachment_image($produto_2, 'full', false, array('class' => 'desktop-only'));
-                    echo wp_get_attachment_image($produto_2_mobile, 'full', false, array('class' => 'mobile-only'));
-                  endif;
-                ?>
-              </a>
-            </div>
+          </div>
+          <div class="produto-2">
+            <a href="<?php echo $link_produto_2 ?>">
+              <?php if ($produto_2) :
+                echo wp_get_attachment_image($produto_2, 'full', false, array('class' => 'desktop-only'));
+                echo wp_get_attachment_image($produto_2_mobile, 'full', false, array('class' => 'mobile-only'));
+              endif;
+              ?>
+            </a>
+          </div>
         </div>
       </div>
     </div>
