@@ -76,7 +76,7 @@ $qr_code = get_field('qr_code');
               <div class="checkbox-container">
                 <input type="checkbox" id="privacidade" name="privacidade" class="checkbox" aria-required="true" required value="1">
                 <label for="privacidade" class="custom-checkbox"></label>
-                <label for="privacidade">Li e aceito as <a href="<?php echo esc_url(home_url('/politica-de-privacidade')); ?>" target="_blank">Política de Privacidade</a></label>
+                <label for="privacidade">Li e aceito a <a href="<?php echo esc_url(home_url('/politica-de-privacidade')); ?>" target="_blank">Política de Privacidade</a></label>
               </div>
               <div class="submit-container">
                 <button class="button" type="submit">Enviar messagem</button>
