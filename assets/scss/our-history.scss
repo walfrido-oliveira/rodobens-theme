@@ -77,6 +77,12 @@
         }
       }
     }
+
+    .imagem-direita {
+      @media (max-width: $mobile) {
+        margin-top: 16px;
+      }
+    }
   }
 
   #historia_2 {

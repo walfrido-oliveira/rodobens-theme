@@ -37,7 +37,7 @@ $imagem_esquerda_mobile = get_field('imagem_esquerda_mobile');
     <div class="container">
       <div class="row">
         <div class="col texto-esquerda"><?php the_field('texto_esquerda') ?></div>
-        <div class="col">
+        <div class="col imagem-direita">
           <?php if ($imagem_direita) :
             echo wp_get_attachment_image($imagem_direita, 'full', false, array('class' => 'desktop-only'));
             echo wp_get_attachment_image($imagem_direita_mobile, 'full', false, array('class' => 'mobile-only'));
