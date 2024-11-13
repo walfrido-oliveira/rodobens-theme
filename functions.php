@@ -21,6 +21,8 @@ function rodobems_theme_setup()
 }
 add_action('after_setup_theme', 'rodobems_theme_setup');
 
+add_filter( 'show_admin_bar', '__return_false' );
+
 function rodobems_theme_script()
 {
   wp_register_script('main-script', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);

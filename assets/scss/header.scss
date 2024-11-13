@@ -1,4 +1,9 @@
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  top: 0px;
+  
   background: $green-dark;
   padding: 24px 0px;
 

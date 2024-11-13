@@ -32,6 +32,16 @@ hr {
   margin: 20px 0;
 }
 
+main {
+  @media (min-width: $desktop) {
+    padding-top: 96px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 72px;
+  }
+}
+
 .skip-link,
 .screen-reader-only {
   position: absolute;
