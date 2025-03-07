@@ -182,12 +182,14 @@
     }
 
     #conselho {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       justify-content: center;
-      align-items: center;
+      align-items: baseline;
 
       @media (max-width: $mobile) {
+        display: flex;
         flex-direction: column;
         gap: 0px;
       }
@@ -204,6 +206,7 @@
           font-size: px-to-rem(18px);
           line-height: 150%;
           color: $black;
+          text-transform: uppercase;
 
           margin: 24px 0 4px 0;
 
